@@ -26,7 +26,7 @@ export default {
   flex-direction: column;
 
   background-image: url('../assets/campfire.jpg');
-  background-size: 100%;
+  background-size: 100% 100%;
 z-index: -5;
   /* background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%); */
 
@@ -57,8 +57,8 @@ z-index: -5;
   font-size: 18px;
 }
 .viewWorkButton:hover {
-  background-color: dodgerblue;
-  color: white;
+  background-color: white;
+  color: dodgerblue;
 }
 .overlay {
   position: absolute;
@@ -66,9 +66,9 @@ z-index: -5;
   left: 0px;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(15, 155, 255, 0.6);
   z-index: 0;
-  clip-path: circle(40% at 50% 50%);
+  clip-path: circle(50% at 50% 60%);
 
   /* clip-path: polygon(0 0, 100% 0%, 100% 48%, 0 48%); */
 }

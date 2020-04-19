@@ -1,13 +1,13 @@
 <template lang="html">
   <div class="pageContainer">
-    <h1 class="pageHeading">PROJECTS</h1>
+    <h2 class="pageHeading">PROJECTS</h2>
     <wordcloud
       :data="defaultWords"
       nameKey="name"
       valueKey="value"
-      font="Bebas Neue"
-      :fontSize="[40,40]"
-      :rotate="{from: -15, to: 75, numOfOrientation: 7 }"
+      font="Lato"
+      :fontSize="[10,80]"
+      :rotate="{from: -90, to: 90, numOfOrientation: 5 }"
       :color="myColors"
       :showTooltip="false"
       :wordClick="wordClickHandler"
@@ -29,7 +29,7 @@ export default {
  },
  data() {
    return {
-     myColors: ['#E3170A','#FFF', '#091540'],
+     myColors: ['#E3170A', '#091540'],
      defaultWords: [
        {
          "name": "Travelbucket",
@@ -80,11 +80,14 @@ export default {
   flex-direction: column;
 
   width: 100vw;
-  min-height: 60vh;
+  min-height: 100vh;
   height: auto;
   top: 0px;
   left: 0px;
   font-family: "Lato", sans-serif;
+  background: url('../assets/workshop.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   /* background: linear-gradient(0deg, #00d2ff 0%, #3a47d5 100%); */
 
 }
@@ -93,15 +96,22 @@ export default {
 
   text-align: center;
   color: white;
-  margin-bottom: 1em;
+  background-color:  rgba(15, 155, 255);
+  -webkit-box-shadow: 0px 0px 44px 16px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 44px 16px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 44px 16px rgba(0,0,0,0.75);
+  height: 20vh;
+  padding-top: 4%;
+  width: 100%;
+
 }
 .wordcloud {
-  width: 95%;
-  height: 20em;
+  width: 80%;
+  height: 100vh;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-image: url('../assets/crumpled-paper.jpg');
 
-  -webkit-box-shadow: 0px 0px 28px -1px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 0px 28px -1px rgba(0,0,0,0.75);
-  box-shadow: 0px 0px 28px -1px rgba(0,0,0,0.75);
 
 }
 </style>

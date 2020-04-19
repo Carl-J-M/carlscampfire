@@ -48,13 +48,10 @@ export default {
   display: flex;
   flex-direction: column;
   width: 100vw;
-  height: auto;
+  height: 100vh;
   top: 0px;
   left: 0px;
-
   background-image: url('../assets/lakepier.jpg');
-  background-size: 100%;
-  padding-bottom: 20vh;
 
 
 
@@ -73,7 +70,8 @@ export default {
   -moz-box-shadow: 0px 0px 28px -1px rgba(0,0,0,0.75);
   box-shadow: 0px 0px 28px -1px rgba(0,0,0,0.75);
 
-  background-color: rgba(255, 255, 255, 0.7);
+  background-image: url('../assets/about-header-castle.jpg');
+  background-size: 100%;
 
 
 
@@ -101,7 +99,7 @@ export default {
  color: white;
   right: 30%;
 
-  bottom: 10%;
+  bottom: 30%;
 }
 .location {
   color: black;
@@ -116,7 +114,7 @@ export default {
   width: 80%;
   margin: auto;
   height: auto;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color:  rgba(15, 155, 255, 0.9);
 
 
 
@@ -130,9 +128,6 @@ export default {
  color: white;
  font-size: 1em;
  text-align: center;
- background-color: rgba(15, 155, 255, 0.6);
-
-
  border-radius: 0.2em;
 
 }
@@ -147,7 +142,7 @@ export default {
   left: 0px;
   width: 100%;
   height: 100%;
-  background-color: rgba(15, 155, 255, 0.6);
+  background-color: rgba(15, 155, 255, 0.9);
   z-index: 0;
   clip-path: polygon(0 0, 100% 0%, 90% 100%, 10% 100%);
 
