@@ -56,6 +56,7 @@ background: linear-gradient(to top, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, Fir
 .header {
 
   background-image: url('../assets/about-header-castle.jpg');
+  /* background-size: 100% 100%; */
   top: 0px;
   left: 0px;
   width: 100vw;
@@ -82,6 +83,8 @@ background: linear-gradient(to top, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, Fir
 .avatar-text {
   position: absolute;
   text-align: left;
+  font-family: Bebas Neue, sans-serif;
+  font-size: 1.5em;
   color: #F7971E;
   margin-left: 20%;
   bottom: 10%;
@@ -93,8 +96,8 @@ background: linear-gradient(to top, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, Fir
 
 .textContainer {
   display: flex;
-align-content: flex-start, space-around;
-
+  align-content: flex-start, space-around;
+  font-family: "Roboto", sans-serif;
   width: 80%;
   margin: auto;
   height: 70vh;
@@ -103,8 +106,9 @@ align-content: flex-start, space-around;
 
 .subContainer {
  width: 45%;
- margin: 20px;
-
+ margin: 2em 1em;
+ padding: 2em;
+ background-color: rgba(255, 255, 255, 0.8);
  text-align: left;
  margin-top: 2em;
 }

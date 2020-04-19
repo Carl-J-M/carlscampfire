@@ -7,6 +7,7 @@
       valueKey="value"
       font="Helvetica"
       :fontSize="[30,50]"
+      :rotate="{from: -45, to: 45, numOfOrientation: 2 }"
       :color="myColors"
       :showTooltip="false"
       :wordClick="wordClickHandler"
@@ -97,7 +98,10 @@ background: linear-gradient(to bottom, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, 
 
 }
 .wordcloud {
-  max-width: 150%;
+  width: 80%;
+  height: 25em;
+  background-color: rgba(255, 176, 0, 0.2);
+  border-radius: 5px;
 
 
 }
