@@ -11,18 +11,23 @@
   <div class="textContainer">
     <div class="subContainer">
         <h1>Skills</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <ul>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
+        <p>I've used a wide variety of different technologies and languages to tackle a range of different problems in the past. Here's a few of those:</p>
+        <ul class="skillsList">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Vue.js | React</li>
+          <li>Java</li>
+          <li>SQL</li>
+          <li>Ruby</li>
+          <li>Express</li>
+          <li>MongoDB</li>
         </ul>
     </div>
     <div class="subContainer">
         <h1>Technical Education</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h2>Trainee Software Developer - CodeClan</h2>
+        <p>CodeClan is an intensive 16-week Professional Software Development course following agile principles. A full-stack curriculum involing 800+ hours of structured programming.</p>
     </div>
   </div>
 
@@ -100,7 +105,12 @@ align-content: flex-start, space-around;
  width: 45%;
  margin: 20px;
 
- text-align: center;
+ text-align: left;
  margin-top: 2em;
+}
+
+.skillsList {
+  list-style-type: none;
+  text-align: left;
 }
 </style>
