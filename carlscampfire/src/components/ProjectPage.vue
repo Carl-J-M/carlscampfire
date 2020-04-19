@@ -6,8 +6,8 @@
       nameKey="name"
       valueKey="value"
       font="Bebas Neue"
-      :fontSize="[30,50]"
-      :rotate="{from: -45, to: 45, numOfOrientation: 2 }"
+      :fontSize="[40,40]"
+      :rotate="{from: -15, to: 75, numOfOrientation: 7 }"
       :color="myColors"
       :showTooltip="false"
       :wordClick="wordClickHandler"
@@ -85,7 +85,7 @@ export default {
   top: 0px;
   left: 0px;
   font-family: "Lato", sans-serif;
-  background: linear-gradient(0deg, #00d2ff 0%, #3a47d5 100%);
+  /* background: linear-gradient(0deg, #00d2ff 0%, #3a47d5 100%); */
 
 }
 
@@ -96,11 +96,9 @@ export default {
   margin-bottom: 1em;
 }
 .wordcloud {
-  width: 100%;
-  height: 25em;
+  width: 95%;
+  height: 20em;
 
-  background-image: url('../assets/clouds.jpg');
-  background-size: 100% 100%;
   -webkit-box-shadow: 0px 0px 28px -1px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 0px 28px -1px rgba(0,0,0,0.75);
   box-shadow: 0px 0px 28px -1px rgba(0,0,0,0.75);

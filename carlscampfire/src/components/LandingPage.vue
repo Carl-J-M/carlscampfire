@@ -1,11 +1,12 @@
 <template lang="html">
   <div class="pageContainer">
-    <div class="splashText">
+
+    <div class="splashText front">
       <h1>Carl Mensah</h1>
       <h2>SOFTWARE DEVELOPER</h2>
-      <button class="viewWorkButton">VIEW WORK</button>
+      <button class="viewWorkButton front">VIEW WORK</button>
     </div>
-
+<div class="overlay"/>
   </div>
 </template>
 
@@ -24,8 +25,10 @@ export default {
   left: 0px;
   flex-direction: column;
 
-
-  background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+  background-image: url('../assets/campfire.jpg');
+  background-size: 100%;
+z-index: -5;
+  /* background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%); */
 
 }
 
@@ -33,9 +36,10 @@ export default {
   justify-content: center;
   align-self: center;
   margin: auto;
+  margin-top: 50vh;
   color: white;
   text-align: center;
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 .viewWorkButton {
@@ -56,5 +60,19 @@ export default {
   background-color: dodgerblue;
   color: white;
 }
+.overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: 0;
+  clip-path: circle(40% at 50% 50%);
 
+  /* clip-path: polygon(0 0, 100% 0%, 100% 48%, 0 48%); */
+}
+.front {
+  z-index: 2;
+}
 </style>
