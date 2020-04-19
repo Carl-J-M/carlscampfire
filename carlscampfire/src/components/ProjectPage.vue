@@ -1,11 +1,11 @@
 <template lang="html">
   <div class="pageContainer">
-    <h1 class="pageHeading">Projects</h1>
+    <h1 class="pageHeading">PROJECTS</h1>
     <wordcloud
       :data="defaultWords"
       nameKey="name"
       valueKey="value"
-      font="Helvetica"
+      font="Bebas Neue"
       :fontSize="[30,50]"
       :rotate="{from: -45, to: 45, numOfOrientation: 2 }"
       :color="myColors"
@@ -84,25 +84,26 @@ export default {
   height: auto;
   top: 0px;
   left: 0px;
-
-  background: #F7971E;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to bottom, #FFD200, #F7971E);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to bottom, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  font-family: "Lato", sans-serif;
+  background: linear-gradient(0deg, #00d2ff 0%, #3a47d5 100%);
 
 }
 
 .pageHeading {
 
   text-align: center;
-
+  color: white;
+  margin-bottom: 1em;
 }
 .wordcloud {
-  width: 80%;
+  width: 100%;
   height: 25em;
-  background-color: rgba(255, 176, 0, 0.2);
-  border-radius: 5px;
 
+  background-image: url('../assets/clouds.jpg');
+  background-size: 100% 100%;
+  -webkit-box-shadow: 0px 0px 28px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 28px -1px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 28px -1px rgba(0,0,0,0.75);
 
 }
 </style>

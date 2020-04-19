@@ -3,7 +3,7 @@
     <div class="splashText">
       <h1>Carl Mensah</h1>
       <h2>SOFTWARE DEVELOPER</h2>
-      <button class="viewWorkButton">VIEW MY WORK</button>
+      <button class="viewWorkButton">VIEW WORK</button>
     </div>
 
   </div>
@@ -25,10 +25,7 @@ export default {
   flex-direction: column;
 
 
-  background: #F7971E;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to bottom, #FFD200, #F7971E);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to bottom, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
 
 }
 
@@ -36,22 +33,28 @@ background: linear-gradient(to bottom, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, 
   justify-content: center;
   align-self: center;
   margin: auto;
-  color: black;
+  color: white;
   text-align: center;
   font-family: "Roboto", sans-serif;
 }
 
 .viewWorkButton {
-  color: black;
-  background-color: white;
+  color: white;
 
-  padding: 0.5em;
+  padding: 1em;
+  padding-left: 1.8em;
   margin-top: 1em;
-
-  border-radius: 1em;
-
+  border: none;
+  background-color: transparent;
+  letter-spacing: 1em;
+  border: solid white 2px;
+  border-radius: 0.2em;
   font-weight: 600;
   font-size: 18px;
+}
+.viewWorkButton:hover {
+  background-color: dodgerblue;
+  color: white;
 }
 
 </style>
