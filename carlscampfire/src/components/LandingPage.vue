@@ -3,10 +3,10 @@
 
     <div class="splashText front">
       <h1>Carl Mensah</h1>
-      <h2>SOFTWARE DEVELOPER</h2>
+      <h2 class="underline">SOFTWARE DEVELOPER</h2>
       <button class="viewWorkButton front">VIEW WORK</button>
     </div>
-<div class="overlay"/>
+<div class="overlay pulseElement"/>
   </div>
 </template>
 
@@ -66,7 +66,6 @@ z-index: -5;
   left: 0px;
   width: 100%;
   height: 100%;
-  background-color: rgba(15, 155, 255, 0.6);
   z-index: 0;
   clip-path: circle(50% at 50% 60%);
 
@@ -74,5 +73,23 @@ z-index: -5;
 }
 .front {
   z-index: 2;
+}
+.pulseElement {
+    animation: pulse 10s ease-in-out forwards;
+}
+@keyframes pulse {
+  0% {
+    background-color: rgba(255, 181, 33,0.0);
+
+
+	}
+	25% {
+    background-color: rgba(255, 181, 33, 0.7);
+
+
+	}
+	100% {
+    background-color: rgba(15, 155, 255, 0.0);
+	}
 }
 </style>

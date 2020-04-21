@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <landing-page/>
+
     <about-page/>
     <project-page/>
     <contact-page/>

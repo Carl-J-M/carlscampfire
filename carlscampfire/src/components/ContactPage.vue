@@ -13,7 +13,7 @@ export default {
 .pageContainer {
   display: flex;
   width: 100vw;
-  height: 500px;
+  height: 100vh;
   top: 0px;
   left: 0px;
 

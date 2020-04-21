@@ -11,6 +11,7 @@
     "node": "13.2.0"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
     "core-js": "^3.6.4",
     "vue": "^2.6.11",
     "vue-wordcloud": "1.1.1"
