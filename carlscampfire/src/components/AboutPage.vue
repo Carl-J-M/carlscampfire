@@ -1,8 +1,8 @@
 <template lang="html">
 <div class="pageContainer">
   <div class="header">
-    <div class="icon github"></div>
-    <div class="icon linkedin"></div>
+    <a href="https://github.com/Carl-J-M"><div class="icon github"></div></a>
+    <a href="#"><div class="icon linkedin"></div></a>
       <div class="avatar front"/>
 
       <div class="avatar-text front">
@@ -146,7 +146,7 @@ export default {
 .avatar-text {
   position: absolute;
   text-align: right;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   color: white;
   margin-left: 40vw;
   bottom: 50%;
@@ -158,7 +158,7 @@ export default {
   display: flex;
   align-content: flex-start, space-around;
   flex-wrap: wrap;
-  font-family: "Roboto", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   width: 80%;
   margin: auto;
   margin-top: 0px;

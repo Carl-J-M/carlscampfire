@@ -3,7 +3,7 @@
     <div class="splashText front">
       <h1>Carl Mensah</h1>
       <h2 class="underline">SOFTWARE DEVELOPER</h2>
-      <button class="viewWorkButton front">VIEW WORK</button>
+      <a href="#projects"><button class="viewWorkButton front">VIEW WORK</button></a>
     </div>
   <div class="overlay pulseElement"/>
   </div>
@@ -38,12 +38,12 @@ z-index: -5;
   margin-top: 50vh;
   color: white;
   text-align: center;
-  font-family: "Lato", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .viewWorkButton {
   color: white;
-
+ cursor: pointer;
   padding: 1em;
   padding-left: 1.8em;
   margin-top: 1em;
