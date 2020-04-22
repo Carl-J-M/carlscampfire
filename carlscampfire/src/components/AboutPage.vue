@@ -15,10 +15,33 @@
   </div>
   <div class="textContainer">
     <div class="subContainer pulseElement">
-        <h3>TECHNICAL EDUCATION</h3>
+        <h3>BACKGROUND</h3>
+        <h4 class="left subheading">Where?</h4>
+        <p class="left subtext">
+        I grew up near Stoke-On-Trent in the midlands.
+        My most recent role was working as a cocktail bartender at Dishoom in Edinburgh.</p>
+        <h4 class="left subheading">Why?</h4>
+        <p class="left subtext">
+          I decided to leave the hospitality industry after feeling as though my ability to learn new things began to stagnate. I didn't feel challenged or excited by my work and resolved to learn all I could about computer programming and software development.
+        </p>
+        <h4 class="left subheading">How?</h4>
+                <p class="left subtext">I had spent several years studying software development as a hobby while working in my previous industry.</p>
+                <p class="left subtext">I decided to enroll at CodeClan in January 2020 and become a professional software developer.</p>
     </div>
     <div class="subContainer pulseElement">
-        <h3>BACKGROUND</h3>
+        <h3>EDUCATION</h3>
+        <h4 class="left subheading">CodeClan, Edinburgh</h4>
+        <p class="left subtext">An intensive 16-week Professional Software Development course following agile principles. A full-stack curriculum involing 800+ hours of structured programming.
+        <p class="left subtext">Throughout the course I gained valuable experience using a wide variety of technologies, both in group settings and individually.</p>
+        <h4 class="left subheading">Self Study</h4>
+
+        <p class="left subtext">
+        I love learning about new technologies, problem solving techniques and UI/UX design.
+        </p>
+        <p class="left subtext">
+        I'm eager to work with more experienced developers I can learn from and improve my skills.
+        </p>
+</p>
     </div>
     <div class="subContainer pulseElement">
       <h3>SKILLS</h3>
@@ -152,9 +175,10 @@ export default {
  font-size: auto;
  text-align: center;
  border-radius: 0.2em;
+ margin-bottom: 1em;
 
+ margin-top: -1em;
 }
-
 .skillsList {
 
   list-style-type: none;
@@ -216,16 +240,23 @@ export default {
 .skillHeading {
   font-size: 0.3em;
 }
+.left {
+  text-align: left;
+}
+.subheading {
+  margin-top: 1em;
+  margin-bottom: 0.3em;
+}
+.subtext {
+  font-size: 1em;
+  margin-bottom: 0.5em;
+}
 @keyframes pulse {
 	0% {
-    background-color: rgba(255, 181, 33,0.2);
-
-
+    background-color: rgba(255, 181, 33,0.8);
 	}
 	25% {
     background-color: rgba(255, 181, 33, 0.8);
-
-
 	}
 	100% {
     background-color: rgba(15, 155, 255, 0.8);

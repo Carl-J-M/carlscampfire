@@ -1,12 +1,11 @@
 <template lang="html">
   <div class="pageContainer">
-
     <div class="splashText front">
       <h1>Carl Mensah</h1>
       <h2 class="underline">SOFTWARE DEVELOPER</h2>
       <button class="viewWorkButton front">VIEW WORK</button>
     </div>
-<div class="overlay pulseElement"/>
+  <div class="overlay pulseElement"/>
   </div>
 </template>
 
@@ -81,15 +80,18 @@ z-index: -5;
   0% {
     background-color: rgba(255, 181, 33,0.0);
 
-
 	}
 	25% {
-    background-color: rgba(255, 181, 33, 0.7);
-
+    background-color: rgba(255, 181, 33, 0.3);
+    clip-path: circle(30% at 50% 60%);
 
 	}
+  40% {
+    clip-path: circle(100% at 50% 60%);
+  }
 	100% {
-    background-color: rgba(15, 155, 255, 0.0);
+    background-color: rgba(15, 155, 255, 0.3);
+    clip-path: circle(100% at 50% 60%);
 	}
 }
 </style>
