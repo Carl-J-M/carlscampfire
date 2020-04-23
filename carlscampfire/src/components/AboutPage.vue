@@ -297,8 +297,8 @@ export default {
     margin-left: 20vw;
   }
   .avatar {
-    height: 6em;
-    width: 8em;
+    height: 8em;
+    width: 10em;
   }
 }
 </style>
