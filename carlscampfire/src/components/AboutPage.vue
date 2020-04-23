@@ -15,7 +15,7 @@
   </div>
   <div class="textContainer">
     <div class="subContainer pulseElement">
-        <h3>BACKGROUND</h3>
+        <h3 class="subheading">BACKGROUND</h3>
         <h4 class="left subheading">Where?</h4>
         <p class="left subtext">
         I grew up near Stoke-On-Trent in the midlands.
@@ -29,7 +29,7 @@
                 <p class="left subtext">I decided to enroll at CodeClan in January 2020 and become a professional software developer.</p>
     </div>
     <div class="subContainer pulseElement">
-        <h3>EDUCATION</h3>
+        <h3 class="subheading">EDUCATION</h3>
         <h4 class="left subheading">CodeClan, Edinburgh</h4>
         <p class="left subtext">An intensive 16-week Professional Software Development course following agile principles. A full-stack curriculum involing 800+ hours of structured programming.
         <p class="left subtext">Throughout the course I gained valuable experience using a wide variety of technologies, both in group settings and individually.</p>
@@ -47,7 +47,7 @@
 </p>
     </div>
     <div class="subContainer pulseElement">
-      <h3>SKILLS</h3>
+      <h3 class="subheading">SKILLS</h3>
        <div class="skillsContainer">
          <div class="skill">
            <h3 class="skillHeading">JavaScript</h3>
@@ -249,11 +249,12 @@ export default {
 }
 .subheading {
   margin-top: 1em;
-  margin-bottom: 0.3em;
+  margin-bottom: 0.5em;
 }
 .subtext {
   font-size: 1em;
   margin-bottom: 0.5em;
+  line-height: 1.2em;
 }
 @keyframes pulse {
 	0% {
@@ -299,6 +300,9 @@ export default {
   .avatar {
     height: 8em;
     width: 10em;
+  }
+  .skill {
+    width: 20%;
   }
 }
 </style>

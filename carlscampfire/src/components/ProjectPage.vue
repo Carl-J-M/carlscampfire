@@ -5,28 +5,34 @@
     </h2>
 
     <div class="projectContainer">
-
-      <div class="project bg1">
-        <div class="overlayOne pulseElement"/>
-         <h4 class="front center">Cryptic</h4>
-         <p class="front">Puzzle app with admin login and secret event location map.</p>
-      </div>
-
-      <div class="project front">
-        <div class="overlayTwo pulseElement12"/>
-         <h4 class="front center">Reddit 2.0</h4>
-         <p class="front">Vue.js app utilising the reddit API to retrieve posts from a typed subreddit, no page refresh.</p>
-      </div>
-      <div class="project front">
-          <div class="overlayThree pulseElement14"/>
-         <h4 class="front center">TravelBucket</h4>
-         <p class="front">Ruby/Sinatra application using restful routes to retrieve data from a postgres SQL database. Travel bucket list application with CRUD functionality.</p>
-      </div>
-      <div class="project front">
-              <div class="overlayFour pulseElement16"/>
-         <h4 class="front center">Randomflix</h4>
-         <p class="front">A simple film randomizer to help break the stalemate with my flatmates about what movie to watch.</p>
-      </div>
+      <a href="https://github.com/Carl-J-M/js_group_0" class="noStyle">
+        <div class="project bg1">
+          <div class="overlayOne pulseElement"/>
+           <h4 class="front center">Cryptic</h4>
+           <p class="front">Highly stylized Vue.js puzzle app with custom API & Leaflet.js map integration.</p>
+        </div>
+      </a>
+      <a href="https://github.com/Carl-J-M/reddit_proj" class="noStyle">
+        <div class="project front">
+          <div class="overlayTwo pulseElement12"/>
+           <h4 class="front center">Reddit 2.0</h4>
+           <p class="front">Vue.js app utilising the reddit API to retrieve posts from a typed subreddit, content reload without page refresh.</p>
+        </div>
+      </a>
+      <a href="https://github.com/Carl-J-M/travel_bucket" class="noStyle">
+        <div class="project front">
+            <div class="overlayThree pulseElement14"/>
+           <h4 class="front center">TravelBucket</h4>
+           <p class="front">Ruby/Sinatra application using restful routes to retrieve data from a postgres SQL database. Travel bucket list application with CRUD functionality.</p>
+        </div>
+      </a>
+      <a href="https://github.com/Carl-J-M/cinemasite" class="noStyle">
+        <div class="project front">
+                <div class="overlayFour pulseElement16"/>
+           <h4 class="front center">Randomflix</h4>
+           <p class="front">A real simple film randomizer to help break the stalemate with my flatmates about what movie to watch.</p>
+        </div>
+      </a>
     </div>
     <div class="splashText">
       I'm actively seeking my first Junior Developer position.
@@ -101,14 +107,14 @@ export default {
 .project {
 
   width: 25vw;
-  text-align: left;
+  text-align: center;
   align-self: center;
   height: 40vh;
   border-radius: 0.3em;
   color: black;
-
-  font-size: 1.4em;
-  padding: 1em;
+  line-height: 2em;
+  font-size: 1em;
+  padding: 1.5em;
   display: block;
   overflow: hidden;
   font-family: "Josefin Sans", sans-serif;
@@ -169,7 +175,7 @@ export default {
   width: 25%;
   cursor: pointer;
   background-image: url('../assets/beachtent.jpg');
-  background-size: 200% 200%;
+  background-size: 150% 150%;
   z-index: 0;
   opacity: 1;
   transition-duration: 0.5s;

@@ -65,7 +65,7 @@ z-index: -5;
   position: absolute;
   top: 0px;
   left: 0px;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   z-index: 0;
   clip-path: circle(50% at 50% 60%);
@@ -99,6 +99,11 @@ z-index: -5;
 @media only screen and (max-width: 1200px) {
    .pageContainer {
      background-size: 120% 100%;
+   }
+}
+@media only screen and (max-width: 400px) {
+   .pageContainer {
+     background-size: 300% 100%;
    }
 }
 </style>
