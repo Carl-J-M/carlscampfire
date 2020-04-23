@@ -55,6 +55,7 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
 .pageContainer {
   display: flex;
   align-items: center;
@@ -94,6 +95,7 @@ export default {
   width: 100vw;
 
 
+
   margin-bottom: 10em;
   border-radius: 0.3em;
   background-color: white;
@@ -125,7 +127,7 @@ export default {
   position: absolute;
   top: 0px;
   left: 0px;
-  width: 25%;
+  width: 25vw;
   height: 15em;
   background-image: url('../assets/whiteblackwall.jpg');
   background-size: 100% 100%;
@@ -300,7 +302,7 @@ export default {
     margin-bottom: 0em;
   }
   .project {
-    width: 50%;
+    width: 50vw;
     min-height: 15em;
     padding: 1.5em;
   }
