@@ -4,7 +4,7 @@
 
     <about-page/>
     <project-page/>
-    <contact-page/>
+    <!-- <contact-page/> -->
   </div>
 </template>
 

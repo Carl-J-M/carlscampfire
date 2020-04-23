@@ -9,30 +9,40 @@
       <span class="rightSign">-</span>
       <span class="rightSign"></span>
     </h2>
+
     <div class="projectContainer">
 
       <div class="project bg1">
         <div class="overlayOne pulseElement"/>
-         <h4 class="front">Cryptic</h4>
+         <h4 class="front center">Cryptic</h4>
          <p class="front">Puzzle app with admin login and secret event location map.</p>
       </div>
 
       <div class="project front">
         <div class="overlayTwo pulseElement12"/>
-         <h4>Reddit 2.0</h4>
-         <p>Vue.js app utilising the reddit API to retrieve posts from a typed subreddit, no page refresh.</p>
+         <h4 class="front center">Reddit 2.0</h4>
+         <p class="front">Vue.js app utilising the reddit API to retrieve posts from a typed subreddit, no page refresh.</p>
       </div>
       <div class="project front">
           <div class="overlayThree pulseElement14"/>
-         <h4>TravelBucket</h4>
-         <p>Ruby/Sinatra application using restful routes to retrieve data from a postgres SQL database. Travel bucket list application with CRUD functionality.</p>
+         <h4 class="front center">TravelBucket</h4>
+         <p class="front">Ruby/Sinatra application using restful routes to retrieve data from a postgres SQL database. Travel bucket list application with CRUD functionality.</p>
       </div>
       <div class="project front">
               <div class="overlayFour pulseElement16"/>
-         <h4>Randomflix</h4>
-         <p>A simple film randomizer to help break the stalemate with my flatmates about what movie to watch.</p>
+         <h4 class="front center">Randomflix</h4>
+         <p class="front">A simple film randomizer to help break the stalemate with my flatmates about what movie to watch.</p>
       </div>
     </div>
+    <div class="splashText">
+      I'm actively seeking my first Junior Developer position.
+    </div>
+
+    <a href="#contact" class="noStyle"><button class="contactButton">
+      CONTACT
+    </button></a>
+
+
   </div>
 </template>
 
@@ -90,6 +100,10 @@ export default {
   background-color: white;
 
 }
+.splashText {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
 .project {
 
   width: 25vw;
@@ -98,7 +112,9 @@ export default {
   height: 40vh;
   border-radius: 0.3em;
   color: black;
-  padding: 3em 4em;
+
+  font-size: 1.4em;
+  padding: 1em;
   display: block;
   overflow: hidden;
 
@@ -115,9 +131,7 @@ export default {
   z-index: 0;
   opacity: 1;
   transition-duration: 0.5s;
-
-
-
+  cursor: pointer;
 }
 .overlayOne:hover {
 
@@ -145,7 +159,7 @@ export default {
   left: 25vw;
   height: 40vh;
   width: 25%;
-
+  cursor: pointer;
   background-image: url('../assets/redditalien.png');
   background-size: 20%;
   z-index: 0;
@@ -158,7 +172,7 @@ export default {
   left: 50vw;
   height: 40vh;
   width: 25%;
-
+  cursor: pointer;
   background-image: url('../assets/beachtent.jpg');
   background-size: 200% 200%;
   z-index: 0;
@@ -171,7 +185,8 @@ export default {
   left: 75vw;
   height: 40vh;
   width: 25%;
-  background-image: url('../assets/dice.jpg');
+  cursor: pointer;
+  background-image: url('../assets/colorwheel.jpg');
   background-size: 200% 200%;
   z-index: 0;
   opacity: 1;
@@ -196,6 +211,9 @@ export default {
   /* background-image: url('../assets/reddark.jpg'); */
   background-color: white;
 }
+.center {
+  text-align: center;
+}
 .leftSign {
 
   animation: slide 7s ease-in-out infinite;
@@ -206,6 +224,24 @@ export default {
   animation: slide2 4s ease-in-out infinite;
   overflow: hidden;
   color: red;
+}
+.contactButton {
+  color: black;
+ cursor: pointer;
+  padding: 1em;
+  padding-left: 1.8em;
+  margin-top: 1em;
+  margin-bottom: 4em;
+  border: none;
+  background-color: transparent;
+  letter-spacing: 1em;
+  border: solid black 2px;
+  border-radius: 0.2em;
+  font-weight: 600;
+  font-size: 18px;
+}
+.noStyle {
+  text-decoration: none;
 }
 @keyframes pulse {
 	0% {
@@ -240,7 +276,7 @@ export default {
 }
 @keyframes slide2 {
   0%{
-      margin-left: 0.5em;
+      margin-left: 0.1em;
       font-size: 1em;
   }
 
@@ -250,7 +286,7 @@ export default {
   }
 
   100%{
-    margin-left: 0.5em;
+    margin-left: 0.1em;
     font-size: 1em;
   }
 }

@@ -1,5 +1,5 @@
 <template lang="html">
-<div class="pageContainer">
+<div class="pageContainer" id="contact">
   <div class="header">
     <a href="https://github.com/Carl-J-M"><div class="icon github"></div></a>
     <a href="#"><div class="icon linkedin"></div></a>
@@ -25,7 +25,7 @@
           I decided to leave the hospitality industry after feeling as though my ability to learn new things began to stagnate. I didn't feel challenged or excited by my work and resolved to learn all I could about computer programming and software development.
         </p>
         <h4 class="left subheading">How?</h4>
-                <p class="left subtext">I had spent several years studying software development as a hobby while working in my previous industry.</p>
+                <p class="left subtext">I spent several years studying software development as a hobby while working in my previous industry.</p>
                 <p class="left subtext">I decided to enroll at CodeClan in January 2020 and become a professional software developer.</p>
     </div>
     <div class="subContainer pulseElement">
@@ -40,6 +40,9 @@
         </p>
         <p class="left subtext">
         I'm eager to work with more experienced developers I can learn from and improve my skills.
+        </p>
+        <p class="left subtext">
+        While I'm most excited to improve my front-end skills, I have a solid grasp of back-end fundamentals and would be eager to learn more on the journey to Full Stack.
         </p>
 </p>
     </div>

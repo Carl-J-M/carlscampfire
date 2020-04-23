@@ -3,7 +3,8 @@
     <div class="splashText front">
       <h1>Carl Mensah</h1>
       <h2 class="underline">SOFTWARE DEVELOPER</h2>
-      <a href="#projects"><button class="viewWorkButton front">VIEW WORK</button></a>
+      <a href="#projects">
+        <button class="viewWorkButton front">VIEW WORK</button></a>
     </div>
   <div class="overlay pulseElement"/>
   </div>

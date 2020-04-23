@@ -17,7 +17,7 @@ export default {
   top: 0px;
   left: 0px;
 
-  background: linear-gradient(180deg, #00d2ff 0%, #3a47d5 100%);
+  background: white;
 
 }
 
