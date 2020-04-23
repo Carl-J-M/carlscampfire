@@ -103,6 +103,7 @@ export default {
 .splashText {
   font-size: 1.5em;
   margin-bottom: 1em;
+  font-family: "Josefin Sans", sans-serif;
 }
 .project {
 
@@ -117,6 +118,7 @@ export default {
   padding: 1em;
   display: block;
   overflow: hidden;
+  font-family: "Josefin Sans", sans-serif;
 
 }
 
@@ -239,6 +241,7 @@ export default {
   border-radius: 0.2em;
   font-weight: 600;
   font-size: 18px;
+  font-family: "Josefin Sans", sans-serif;
 }
 .noStyle {
   text-decoration: none;

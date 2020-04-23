@@ -55,6 +55,7 @@ z-index: -5;
   border-radius: 0.2em;
   font-weight: 600;
   font-size: 18px;
+  font-family: "Josefin Sans", sans-serif;
 }
 .viewWorkButton:hover {
   background-color: white;
