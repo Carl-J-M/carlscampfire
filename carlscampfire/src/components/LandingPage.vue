@@ -54,7 +54,7 @@ z-index: -5;
   border: solid white 2px;
   border-radius: 0.2em;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 1em;
   font-family: "Josefin Sans", sans-serif;
 }
 .viewWorkButton:hover {
@@ -95,5 +95,10 @@ z-index: -5;
     background-color: rgba(15, 155, 255, 0.3);
     clip-path: circle(100% at 50% 60%);
 	}
+}
+@media only screen and (max-width: 1200px) {
+   .pageContainer {
+     background-size: 120% 100%;
+   }
 }
 </style>

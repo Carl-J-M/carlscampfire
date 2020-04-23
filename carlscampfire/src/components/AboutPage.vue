@@ -106,6 +106,7 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
 .pageContainer {
   display: flex;
   flex-direction: column;
@@ -264,5 +265,40 @@ export default {
 	100% {
     background-color: rgba(15, 155, 255, 0.8);
 	}
+}
+
+@media only screen and (max-width: 1200px) {
+  .textContainer {
+     flex-direction: row;
+
+  }
+  .subContainer {
+    width: 100%;
+    margin: 0.2em;
+    margin-top: 1em;
+    padding: 1em;
+  }
+  .avatar {
+    right: 20px;
+  }
+  .avatar-text {
+    margin-left: 5vw;
+    text-align: left;
+    font-size: 0.8em;
+  }
+  .header {
+    background-image: none;
+    max-height: 10em;
+  }
+  .github {
+    margin-left: 5vw;
+  }
+  .linkedin {
+    margin-left: 20vw;
+  }
+  .avatar {
+    height: 6em;
+    width: 8em;
+  }
 }
 </style>

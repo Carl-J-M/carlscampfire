@@ -127,7 +127,7 @@ export default {
   top: 0px;
   left: 0px;
   width: 25%;
-  height: 100%;
+  height: 15em;
   background-image: url('../assets/whiteblackwall.jpg');
   background-size: 100% 100%;
   z-index: 0;
@@ -159,7 +159,7 @@ export default {
   position: absolute;
   top: 0px;
   left: 25vw;
-  height: 40vh;
+  height: 15em;
   width: 25%;
   cursor: pointer;
   background-image: url('../assets/redditalien.png');
@@ -172,7 +172,7 @@ export default {
   position: absolute;
   top: 0px;
   left: 50vw;
-  height: 40vh;
+  height: 15em;
   width: 25%;
   cursor: pointer;
   background-image: url('../assets/beachtent.jpg');
@@ -185,7 +185,7 @@ export default {
   position: absolute;
   top: 0px;
   left: 75vw;
-  height: 40vh;
+  height: 15em;
   width: 25%;
   cursor: pointer;
   background-image: url('../assets/colorwheel.jpg');
@@ -291,6 +291,58 @@ export default {
   100%{
     margin-left: 0.1em;
     font-size: 1em;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .pageHeading {
+    font-size: 1em;
+    padding-bottom: 0em;
+    margin-bottom: 0em;
+  }
+  .project {
+    width: 50%;
+    min-height: 15em;
+    padding: 1.5em;
+  }
+  .projectContainer {
+   padding-top: 0px;
+  }
+  .overlayOne {
+    width: 50%;
+    height: 15em;
+  }
+  .overlayTwo {
+    width: 50%;
+    height: 15em;
+    left: 50%;
+  }
+  .overlayThree {
+    width: 50%;
+    height: 15em;
+    left: 0%;
+    top: 50%;
+  }
+  .overlayFour {
+    width: 50%;
+    height: 15em;
+    left: 50%;
+    top: 50%;
+  }
+  @keyframes slide {
+
+  }
+  @keyframes slide2 {
+
+  }
+  .rightSign {
+    color: black;
+  }
+  .leftSign {
+    color: black;
+  }
+  .splashText {
+    padding: 0em 2em;
   }
 }
 
