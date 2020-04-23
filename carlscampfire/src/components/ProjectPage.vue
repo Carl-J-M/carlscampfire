@@ -1,13 +1,7 @@
 <template lang="html">
   <div class="pageContainer">
     <h2 class="pageHeading" id="projects">
-      <span class="leftSign"></span>
-      <span class="leftSign">+</span>
-      <span class="leftSign"></span>
       PROJECTS
-      <span class="rightSign"></span>
-      <span class="rightSign">-</span>
-      <span class="rightSign"></span>
     </h2>
 
     <div class="projectContainer">
@@ -72,7 +66,6 @@ export default {
 
   color: black;
   background-color: white;
-  padding: 1em;
   padding-left: 1.8em;
   margin-top: 1em;
 
@@ -83,7 +76,7 @@ export default {
   color: black;
   font-weight: 600;
   font-size: 1.5em;
-  min-height: 8em;
+  min-height: 2em;
 
 
 }
