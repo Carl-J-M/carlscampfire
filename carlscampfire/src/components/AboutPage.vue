@@ -2,7 +2,7 @@
 <div class="pageContainer" id="contact">
   <div class="header">
     <a href="https://github.com/Carl-J-M"><div class="icon github"></div></a>
-    <a href="#"><div class="icon linkedin"></div></a>
+    <a href="https://www.linkedin.com/in/carl-mensah-aa27661a7/"><div class="icon linkedin"></div></a>
       <div class="avatar front"/>
 
       <div class="avatar-text front">
