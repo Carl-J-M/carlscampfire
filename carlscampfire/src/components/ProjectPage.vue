@@ -71,8 +71,7 @@ export default {
 
 .pageHeading {
 
-  color: black;
-  background-color: white;
+  color: white;
   padding-left: 1.8em;
   margin-top: 1em;
 
@@ -80,7 +79,7 @@ export default {
   text-align: center;
   min-width: 100%;
   letter-spacing: 1em;
-  color: black;
+  color: white;
   font-weight: 600;
   font-size: 1.5em;
   min-height: 2em;
@@ -98,13 +97,14 @@ export default {
 
   margin-bottom: 10em;
   border-radius: 0.3em;
-  background-color: white;
+
 
 }
 .splashText {
   font-size: 1.5em;
   margin-bottom: 1em;
   font-family: "Josefin Sans", sans-serif;
+  color: white;
 }
 .project {
 
@@ -113,7 +113,7 @@ export default {
   align-self: center;
   height: 40vh;
   border-radius: 0.3em;
-  color: black;
+  color: white;
   line-height: 2em;
   font-size: 1em;
   padding: 1.5em;
@@ -138,21 +138,21 @@ export default {
 }
 .overlayOne:hover {
 
-    opacity: 0;
+    opacity: 0.1;
     background-size: 200% 200%;
 
 
 }
 .overlayTwo:hover {
-  opacity: 0;
+  opacity: 0.05;
 
 }
 .overlayThree:hover {
-  opacity: 0;
+  opacity: 0.1;
   background-size: 150% 150%;
 }
 .overlayFour:hover {
-  opacity: 0;
+  opacity: 0.1;
   background-size: 100% 100%;
 }
 
@@ -210,10 +210,6 @@ export default {
 .pulseElement16 {
     animation: pulse 14s ease-in-out infinite;
 }
-.bg1 {
-  /* background-image: url('../assets/reddark.jpg'); */
-  background-color: white;
-}
 .center {
   text-align: center;
 }
@@ -229,7 +225,7 @@ export default {
   color: red;
 }
 .contactButton {
-  color: black;
+  color: white;
  cursor: pointer;
   padding: 1em;
   padding-left: 1.8em;
@@ -238,7 +234,7 @@ export default {
   border: none;
   background-color: transparent;
   letter-spacing: 1em;
-  border: solid black 2px;
+  border: solid white 2px;
   border-radius: 0.2em;
   font-weight: 600;
   font-size: 18px;
@@ -336,14 +332,10 @@ export default {
   @keyframes slide2 {
 
   }
-  .rightSign {
-    color: black;
-  }
-  .leftSign {
-    color: black;
-  }
+
   .splashText {
     padding: 0em 2em;
+    color: white;
   }
 }
 

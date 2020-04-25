@@ -6,7 +6,11 @@
       <a href="#projects">
         <button class="viewWorkButton front">VIEW WORK</button></a>
     </div>
-  <div class="overlay pulseElement"/>
+    <div class="overlay pulseElement"/>
+      <div class="vimeo-wrapper">
+         <iframe src="https://player.vimeo.com/video/326324986?background=1&autoplay=1&loop=1&byline=0&title=0"
+                 frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      </div>
   </div>
 </template>
 
@@ -25,7 +29,7 @@ export default {
   left: 0px;
   flex-direction: column;
 
-  background-image: url('../assets/campfire.jpg');
+  /* background-image: url('../assets/campfire.jpg'); */
   background-size: 100% 100%;
 z-index: -5;
   /* background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%); */
@@ -77,6 +81,27 @@ z-index: -5;
 }
 .pulseElement {
     animation: pulse 10s ease-in-out forwards;
+}
+
+.vimeo-wrapper {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+   pointer-events: none;
+   overflow: hidden;
+}
+.vimeo-wrapper iframe {
+   width: 100vw;
+   height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+   min-height: 100vh;
+   min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
 }
 @keyframes pulse {
   0% {
