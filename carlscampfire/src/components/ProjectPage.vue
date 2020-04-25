@@ -111,10 +111,10 @@ export default {
   text-align: center;
   align-self: center;
   height: 40vh;
-  border-radius: 0.3em;
   color: black;
   line-height: 2em;
   font-size: 1em;
+  padding: 1em;
   display: block;
   overflow: hidden;
   font-family: "Josefin Sans", sans-serif;
