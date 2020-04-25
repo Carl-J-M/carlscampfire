@@ -2,14 +2,20 @@
   <div class="pageContainer">
     <div class="splashText front">
       <h1>Carl Mensah</h1>
-      <h2 class="underline">SOFTWARE DEVELOPER</h2>
+      <h2>SOFTWARE DEVELOPER</h2>
       <a href="#projects">
-        <button class="viewWorkButton front">VIEW WORK</button></a>
+        <button class="viewWorkButton front">VIEW WORK</button>
+      </a>
     </div>
     <div class="overlay pulseElement"/>
       <div class="vimeo-wrapper">
-         <iframe src="https://player.vimeo.com/video/326324986?background=1&autoplay=1&loop=1&byline=0&title=0"
-                 frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+         <iframe
+         src="https://player.vimeo.com/video/326324986?background=1&autoplay=1&loop=1&byline=0&title=0"
+        frameborder="0"
+        webkitallowfullscreen
+        mozallowfullscreen
+        allowfullscreen>
+        </iframe>
       </div>
   </div>
 </template>
@@ -23,43 +29,40 @@ export default {
 
 .pageContainer {
   display: flex;
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
   top: 0px;
   left: 0px;
-  flex-direction: column;
 
-  /* background-image: url('../assets/campfire.jpg'); */
-  background-size: 100% 100%;
-z-index: -5;
-  /* background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%); */
-
+  z-index: -5;
 }
 
 .splashText {
   justify-content: center;
   align-self: center;
+  text-align: center;
   margin: auto;
   margin-top: 50vh;
   color: white;
-  text-align: center;
   font-family: "Josefin Sans", sans-serif;
 }
 
 .viewWorkButton {
   color: white;
- cursor: pointer;
+  background-color: transparent;
+  cursor: pointer;
+  border: solid white 2px;
+  border-radius: 0.2em;
+
   padding: 1em;
   padding-left: 1.8em;
   margin-top: 1em;
-  border: none;
-  background-color: transparent;
-  letter-spacing: 1em;
-  border: solid white 2px;
-  border-radius: 0.2em;
+
   font-weight: 600;
   font-size: 1em;
   font-family: "Josefin Sans", sans-serif;
+  letter-spacing: 1em;
 }
 .viewWorkButton:hover {
   background-color: white;
@@ -73,8 +76,6 @@ z-index: -5;
   height: 100vh;
   z-index: 0;
   clip-path: circle(50% at 50% 60%);
-
-  /* clip-path: polygon(0 0, 100% 0%, 100% 48%, 0 48%); */
 }
 .front {
   z-index: 2;
@@ -95,9 +96,9 @@ z-index: -5;
 }
 .vimeo-wrapper iframe {
    width: 100vw;
-   height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+   height: 56.25vw;
    min-height: 100vh;
-   min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+   min-width: 177.77vh;
    position: absolute;
    top: 50%;
    left: 50%;

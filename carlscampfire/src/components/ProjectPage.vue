@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="pageContainer">
+  <div class="pageContainer pulseElement2">
     <h2 class="pageHeading" id="projects">
       PROJECTS
     </h2>
@@ -14,23 +14,23 @@
       </a>
       <a href="https://github.com/Carl-J-M/reddit_proj" class="noStyle">
         <div class="project front">
-          <div class="overlayTwo pulseElement12"/>
+          <div class="overlayTwo pulseElement"/>
            <h4 class="front center">Reddit 2.0</h4>
            <p class="front">Vue.js app utilising the reddit API to retrieve posts from a typed subreddit, content reload without page refresh.</p>
         </div>
       </a>
       <a href="https://github.com/Carl-J-M/travel_bucket" class="noStyle">
         <div class="project front">
-            <div class="overlayThree pulseElement14"/>
+            <div class="overlayThree"/>
            <h4 class="front center">TravelBucket</h4>
            <p class="front">Ruby/Sinatra application using restful routes to retrieve data from a postgres SQL database. Travel bucket list application with CRUD functionality.</p>
         </div>
       </a>
       <a href="https://github.com/Carl-J-M/cinemasite" class="noStyle">
         <div class="project front">
-                <div class="overlayFour pulseElement16"/>
+                <div class="overlayFour"/>
            <h4 class="front center">Randomflix</h4>
-           <p class="front">A real simple film randomizer to help break the stalemate with my flatmates about what movie to watch.</p>
+           <p>A real simple film randomizer to help break the stalemate with my flatmates about what movie to watch.</p>
         </div>
       </a>
     </div>
@@ -55,32 +55,33 @@ export default {
 </script>
 
 <style lang="css" scoped>
-
 .pageContainer {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: white;
+  top: 0px;
+  left: 0px;
   width: 100vw;
   min-height: 40vh;
   height: auto;
-  top: 0px;
-  left: 0px;
-  font-family: "Lato", sans-serif;
+  margin-top: 1em;
+
+
+  background-color: rgba(15, 155, 255, 0.9);
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .pageHeading {
 
-  color: black;
+  color: white;
   padding-left: 1.8em;
-  margin-top: 1em;
-
+  margin-top: 2em;
   margin-bottom: 1em;
   text-align: center;
   min-width: 100%;
-  letter-spacing: 1em;
+  letter-spacing: 0.5em;
   font-weight: 600;
-  font-size: 1.5em;
+  font-size: 2.5em;
   min-height: 2em;
 
 
@@ -90,31 +91,28 @@ export default {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 100vw;
-
-
 
   margin-bottom: 10em;
   border-radius: 0.3em;
-
-
 }
+
 .splashText {
   font-size: 1.5em;
   margin-bottom: 1em;
   font-family: "Josefin Sans", sans-serif;
-  color: black;
+  color: white;
 }
-.project {
 
-  width: 25vw;
+.project {
+  position: relative;
+  width: 38vw;
   text-align: center;
   align-self: center;
-  height: 40vh;
-  color: black;
+  height: 38vh;
+  color: white;
   line-height: 2em;
   font-size: 1em;
-  padding: 1em;
+  padding: 2em 4em;
   display: block;
   overflow: hidden;
   font-family: "Josefin Sans", sans-serif;
@@ -125,41 +123,29 @@ export default {
   position: absolute;
   top: 0px;
   left: 0px;
-  width: 25vw;
-  height: 15em;
+  width: 100%;
+  height: 100%;
   background-image: url('../assets/whiteblackwall.jpg');
   background-size: 100% 100%;
   z-index: 0;
   opacity: 1;
   transition-duration: 0.5s;
   cursor: pointer;
+  margin: 0;
 }
 .overlayOne:hover {
 
-    opacity: 0.05;
+    opacity: 0;
     background-size: 200% 200%;
 
 
 }
-.overlayTwo:hover {
-  opacity: 0.05;
-
-}
-.overlayThree:hover {
-  opacity: 0.05;
-  background-size: 150% 150%;
-}
-.overlayFour:hover {
-  opacity: 0.05;
-  background-size: 100% 100%;
-}
-
 .overlayTwo {
   position: absolute;
   top: 0px;
-  left: 25vw;
-  height: 15em;
-  width: 25%;
+  left: 0px;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
   background-image: url('../assets/redditalien.png');
   background-size: 20%;
@@ -167,12 +153,16 @@ export default {
   opacity: 1;
   transition-duration: 0.5s;
 }
+.overlayTwo:hover {
+  opacity: 0;
+
+}
 .overlayThree {
   position: absolute;
   top: 0px;
-  left: 50vw;
-  height: 15em;
-  width: 25%;
+  left: 0px;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
   background-image: url('../assets/beachtent.jpg');
   background-size: 150% 150%;
@@ -180,18 +170,26 @@ export default {
   opacity: 1;
   transition-duration: 0.5s;
 }
+.overlayThree:hover {
+  opacity: 0;
+  background-size: 150% 150%;
+}
 .overlayFour {
   position: absolute;
   top: 0px;
-  left: 75vw;
-  height: 15em;
-  width: 25%;
+  left: 0px;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
   background-image: url('../assets/colorwheel.jpg');
-  background-size: 200% 200%;
+  background-size: 150% 150%;
   z-index: 0;
   opacity: 1;
   transition-duration: 0.5s;
+}
+.overlayFour:hover {
+  opacity: 0;
+  background-size: 100% 100%;
 }
 .front {
   z-index: 5;
@@ -199,32 +197,15 @@ export default {
 .pulseElement {
     animation: pulse 11s ease-in-out infinite;
 }
-.pulseElement12 {
-    animation: pulse 12s ease-in-out infinite;
-}
-.pulseElement14 {
-    animation: pulse 13s ease-in-out infinite;
-}
-.pulseElement16 {
-    animation: pulse 14s ease-in-out infinite;
+.pulseElement2 {
+      animation: pulse2 10s ease-in-out forwards;
 }
 .center {
   text-align: center;
 }
-.leftSign {
-
-  animation: slide 7s ease-in-out infinite;
-  overflow: hidden;
-  color: green;
-}
-.rightSign {
-  animation: slide2 4s ease-in-out infinite;
-  overflow: hidden;
-  color: red;
-}
 .contactButton {
-  color: black;
- cursor: pointer;
+  color: white;
+  cursor: pointer;
   padding: 1em;
   padding-left: 1.8em;
   margin-top: 1em;
@@ -232,7 +213,7 @@ export default {
   border: none;
   background-color: transparent;
   letter-spacing: 1em;
-  border: solid black 2px;
+  border: solid white 2px;
   border-radius: 0.2em;
   font-weight: 600;
   font-size: 18px;
@@ -253,6 +234,17 @@ export default {
   100% {
     background-color: rgba(255, 181, 33);
   }
+}
+@keyframes pulse2 {
+	0% {
+    background-color: rgba(255, 181, 33,0.8);
+	}
+	25% {
+    background-color: rgba(255, 181, 33, 0.8);
+	}
+	100% {
+    background-color: rgba(15, 155, 255, 0.8);
+	}
 }
 @keyframes slide {
   0%{
@@ -296,34 +288,15 @@ export default {
     margin-bottom: 0em;
   }
   .project {
-    width: 50vw;
-    min-height: 15em;
 
+    margin: 0px;
+    padding: 1em;
+    font-size: 0.8em;
   }
   .projectContainer {
    padding-top: 0px;
   }
-  .overlayOne {
-    width: 50%;
-    height: 15em;
-  }
-  .overlayTwo {
-    width: 50%;
-    height: 15em;
-    left: 50%;
-  }
-  .overlayThree {
-    width: 50%;
-    height: 15em;
-    left: 0%;
-    top: 50%;
-  }
-  .overlayFour {
-    width: 50%;
-    height: 15em;
-    left: 50%;
-    top: 50%;
-  }
+
   @keyframes slide {
 
   }
@@ -333,7 +306,7 @@ export default {
 
   .splashText {
     padding: 0em 2em;
-    color: black;
+    color: white;
   }
 }
 
