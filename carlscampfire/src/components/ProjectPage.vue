@@ -138,7 +138,7 @@ export default {
 }
 .overlayOne:hover {
 
-    opacity: 0.1;
+    opacity: 0.05;
     background-size: 200% 200%;
 
 
@@ -148,11 +148,11 @@ export default {
 
 }
 .overlayThree:hover {
-  opacity: 0.1;
+  opacity: 0.05;
   background-size: 150% 150%;
 }
 .overlayFour:hover {
-  opacity: 0.1;
+  opacity: 0.05;
   background-size: 100% 100%;
 }
 
