@@ -60,7 +60,7 @@ export default {
   display: flex;
   align-items: center;
   flex-direction: column;
-
+  background-color: white;
   width: 100vw;
   min-height: 40vh;
   height: auto;
@@ -71,7 +71,7 @@ export default {
 
 .pageHeading {
 
-  color: white;
+  color: black;
   padding-left: 1.8em;
   margin-top: 1em;
 
@@ -79,7 +79,6 @@ export default {
   text-align: center;
   min-width: 100%;
   letter-spacing: 1em;
-  color: white;
   font-weight: 600;
   font-size: 1.5em;
   min-height: 2em;
@@ -104,7 +103,7 @@ export default {
   font-size: 1.5em;
   margin-bottom: 1em;
   font-family: "Josefin Sans", sans-serif;
-  color: white;
+  color: black;
 }
 .project {
 
@@ -113,10 +112,9 @@ export default {
   align-self: center;
   height: 40vh;
   border-radius: 0.3em;
-  color: white;
+  color: black;
   line-height: 2em;
   font-size: 1em;
-  padding: 1.5em;
   display: block;
   overflow: hidden;
   font-family: "Josefin Sans", sans-serif;
@@ -225,7 +223,7 @@ export default {
   color: red;
 }
 .contactButton {
-  color: white;
+  color: black;
  cursor: pointer;
   padding: 1em;
   padding-left: 1.8em;
@@ -234,7 +232,7 @@ export default {
   border: none;
   background-color: transparent;
   letter-spacing: 1em;
-  border: solid white 2px;
+  border: solid black 2px;
   border-radius: 0.2em;
   font-weight: 600;
   font-size: 18px;
@@ -300,7 +298,7 @@ export default {
   .project {
     width: 50vw;
     min-height: 15em;
-    padding: 1.5em;
+
   }
   .projectContainer {
    padding-top: 0px;
@@ -335,7 +333,7 @@ export default {
 
   .splashText {
     padding: 0em 2em;
-    color: white;
+    color: black;
   }
 }
 

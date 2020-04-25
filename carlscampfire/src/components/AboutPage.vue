@@ -289,6 +289,7 @@ export default {
   }
   .header {
     background-image: none;
+    background-color: white;
     max-height: 10em;
   }
   .github {
