@@ -26,11 +26,11 @@
            <p class="front">Ruby/Sinatra application using restful routes to retrieve data from a postgres SQL database. Travel bucket list application with CRUD functionality.</p>
         </div>
       </a>
-      <a href="https://github.com/Carl-J-M/cinemasite" class="noStyle">
+      <a href="https://lifetaxon.herokuapp.com/" class="noStyle">
         <div class="project front">
                 <div class="overlayFour"/>
-           <h4 class="front center">Randomflix</h4>
-           <p>A real simple film randomizer to help break the stalemate with my flatmates about what movie to watch.</p>
+           <h4 class="front center">Tree of Life</h4>
+           <p>The taxonomy of life mapped onto a tree-graph using React.js, API data from gbif.com & react-tree-graph library. Tree graph is mapped from data in state for live reload, state updated on click of tree-graph node.</p>
         </div>
       </a>
     </div>
@@ -97,7 +97,9 @@ export default {
 }
 
 .splashText {
-  font-size: 1.5em;
+  letter-spacing: 0.2em;
+  text-align: center;
+  font-size: 2em;
   margin-bottom: 1em;
   font-family: "Josefin Sans", sans-serif;
   color: white;
@@ -165,7 +167,7 @@ export default {
   height: 100%;
   cursor: pointer;
   background-image: url('../assets/beachtent.jpg');
-  background-size: 150% 150%;
+  background-size: 105% 100%;
   z-index: 0;
   opacity: 1;
   transition-duration: 0.5s;

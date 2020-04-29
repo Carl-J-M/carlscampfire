@@ -196,10 +196,8 @@ export default {
   height: 100%;
 
   z-index: -1;
-  /* clip-path: polygon(0 0, 100% 0%, 90% 100%, 10% 100%); */
   clip-path: polygon(0 0, 62% 0, 62% 100%, 0% 100%);
 
-  /* clip-path: polygon(0 0, 100% 0, 80% 0%, 50% 52%, 100% 1000%, 100% 100%, 0 100%); */
 }
 .front {
   z-index: 2;
@@ -258,13 +256,13 @@ export default {
 }
 @keyframes pulse {
 	0% {
-    background-color: rgba(255, 181, 33,0.8);
+    background-color: rgba(255, 181, 33,0.9);
 	}
 	25% {
-    background-color: rgba(255, 181, 33, 0.8);
+    background-color: rgba(255, 181, 33, 0.9);
 	}
 	100% {
-    background-color: rgba(15, 155, 255, 0.8);
+    background-color: rgba(15, 155, 255, 0.9);
 	}
 }
 
