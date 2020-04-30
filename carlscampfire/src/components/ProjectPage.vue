@@ -5,32 +5,32 @@
     </h2>
 
     <div class="projectContainer">
-      <a href="https://github.com/Carl-J-M/js_group_0" class="noStyle">
+      <a href="https://lifetaxon.herokuapp.com/" class="noStyle">
         <div class="project bg1">
           <div class="overlayOne pulseElement"/>
-           <h4 class="front center">Cryptic</h4>
-           <p class="front">Highly stylized Vue.js puzzle app with custom API & Leaflet.js map integration.</p>
+           <h4 class="front center">LIFETAXON (Live)</h4>
+           <p>The taxonomy of life mapped onto a tree-graph using React.js, API data from gbif.com & react-tree-graph library. Tree graph is mapped from data in state for live reload, state updated on click of tree-graph node.</p>
         </div>
       </a>
       <a href="https://github.com/Carl-J-M/reddit_proj" class="noStyle">
         <div class="project front">
           <div class="overlayTwo pulseElement"/>
-           <h4 class="front center">Reddit 2.0</h4>
-           <p class="front">Vue.js app utilising the reddit API to retrieve posts from a typed subreddit, content reload without page refresh.</p>
+           <h4 class="front center">Reddit 2.0 (GitHub link)</h4>
+           <p class="front">Vue.js app utilising the reddit API to retrieve posts from a given subreddit. Using Vue's computed properties to reload the content data and format it onto the page without forcing a refresh.</p>
         </div>
       </a>
       <a href="https://github.com/Carl-J-M/travel_bucket" class="noStyle">
         <div class="project front">
             <div class="overlayThree"/>
-           <h4 class="front center">TravelBucket</h4>
+           <h4 class="front center">TravelBucket (GitHub link)</h4>
            <p class="front">Ruby/Sinatra application using restful routes to retrieve data from a postgres SQL database. Travel bucket list application with CRUD functionality.</p>
         </div>
       </a>
-      <a href="https://lifetaxon.herokuapp.com/" class="noStyle">
+      <a href="https://github.com/Carl-J-M/js_group_0" class="noStyle">
         <div class="project front">
                 <div class="overlayFour"/>
-           <h4 class="front center">Tree of Life</h4>
-           <p>The taxonomy of life mapped onto a tree-graph using React.js, API data from gbif.com & react-tree-graph library. Tree graph is mapped from data in state for live reload, state updated on click of tree-graph node.</p>
+           <h4 class="front center">Cryptic (GitHub link)</h4>
+           <p>Vue.js puzzle app with custom API for admin & user login. Leaflet.js package for displaying map coordinates on correct guess. </p>
         </div>
       </a>
     </div>
@@ -81,7 +81,7 @@ export default {
   min-width: 100%;
   letter-spacing: 0.5em;
   font-weight: 600;
-  font-size: 2.5em;
+  font-size: 2em;
   min-height: 2em;
 
 
@@ -97,9 +97,9 @@ export default {
 }
 
 .splashText {
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
   text-align: center;
-  font-size: 2em;
+  font-size: 1em;
   margin-bottom: 1em;
   font-family: "Josefin Sans", sans-serif;
   color: white;
@@ -127,7 +127,7 @@ export default {
   left: 0px;
   width: 100%;
   height: 100%;
-  background-image: url('../assets/whiteblackwall.jpg');
+  background-image: url('../assets/lifetaxon.png');
   background-size: 100% 100%;
   z-index: 0;
   opacity: 1;
@@ -166,7 +166,7 @@ export default {
   width: 100%;
   height: 100%;
   cursor: pointer;
-  background-image: url('../assets/beachtent.jpg');
+  background-image: url('../assets/travelbucket.png');
   background-size: 105% 100%;
   z-index: 0;
   opacity: 1;
@@ -183,7 +183,7 @@ export default {
   width: 100%;
   height: 100%;
   cursor: pointer;
-  background-image: url('../assets/colorwheel.jpg');
+  background-image: url('../assets/cryptic.png');
   background-size: 150% 150%;
   z-index: 0;
   opacity: 1;
