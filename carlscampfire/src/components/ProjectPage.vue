@@ -1,315 +1,237 @@
 <template lang="html">
-  <div class="pageContainer pulseElement2">
-    <h2 class="pageHeading" id="projects">
+  <div class="pageContainer">
+    <div class="overlay"/>
+    <h1 class="pageHeading" id="projects">
       PROJECTS
-    </h2>
-
-    <div class="projectContainer">
-      <a href="https://lifetaxon.herokuapp.com/" class="noStyle">
-        <div class="project bg1">
-          <div class="overlayOne pulseElement"/>
-           <h4 class="front center">LIFETAXON (Live)</h4>
-           <p>The taxonomy of life mapped onto a tree-graph using React.js, API data from gbif.com & react-tree-graph library. Tree graph is mapped from data in state for live reload, state updated on click of tree-graph node.</p>
+    </h1>
+    <div class="parent">
+      <div class="card1 card" v-on:click="selectProject($event, 0)"></div>
+      <div class="card2 card" v-on:click="selectProject($event, 1)"></div>
+      <div class="card3 card" v-on:click="selectProject($event, 2)"></div>
+      <div class="card1text cardtext">{{ projects[0].title}}
+        <p  class="lifetaxon"><a href="https://lifetaxon.herokuapp.com/">View On Heroku</a></p>
         </div>
-      </a>
-      <a href="https://github.com/Carl-J-M/reddit_proj" class="noStyle">
-        <div class="project front">
-          <div class="overlayTwo pulseElement"/>
-           <h4 class="front center">Reddit 2.0 (GitHub link)</h4>
-           <p class="front">Vue.js app utilising the reddit API to retrieve posts from a given subreddit. Using Vue's computed properties to reload the content data and format it onto the page without forcing a refresh.</p>
-        </div>
-      </a>
-      <a href="https://github.com/Carl-J-M/travel_bucket" class="noStyle">
-        <div class="project front">
-            <div class="overlayThree"/>
-           <h4 class="front center">TravelBucket (GitHub link)</h4>
-           <p class="front">Ruby/Sinatra application using restful routes to retrieve data from a postgres SQL database. Travel bucket list application with CRUD functionality.</p>
-        </div>
-      </a>
-      <a href="https://github.com/Carl-J-M/js_group_0" class="noStyle">
-        <div class="project front">
-                <div class="overlayFour"/>
-           <h4 class="front center">Cryptic (GitHub link)</h4>
-           <p>Vue.js puzzle app with custom API for admin & user login. Leaflet.js package for displaying map coordinates on correct guess. </p>
-        </div>
-      </a>
+      <div class="card2text cardtext">{{ projects[1].title}}</div>
+      <div class="card3text cardtext">{{ projects[2].title}}</div>
     </div>
-    <div class="splashText">
-      I'm actively seeking my first Junior Developer position.
+            <h2 class="displayHeading">{{selectedProjectTitle}}<a :href="selectedProjectLink"><div class="icon github hidden"></div></a></h2>
+        <p class="displayText">{{selectedProjectDescription}}</p>
+    <div class="displayContainer">
+        <div class="tag" v-for="tag in selectedProjectTags">
+          <div>{{tag}}</div>
+        </div>
     </div>
-
-    <a href="#contact" class="noStyle"><button class="contactButton">
-      CONTACT
-    </button></a>
-
-
   </div>
 </template>
 
 <script>
-
 export default {
+  data() {
+    return {
+      selectedProjectTitle: "Click on a project above to find out more.",
+      selectedProjectDescription: "",
+      selectedProjectTags: [],
+      selectedProjectLink: "#contact",
+      projects: 
+      [
+        {
+          title: "LIFETAXON",
+          description: "An interactive map of the taxonomy of life, using live data from gbif.com containing over 240,000 datapoints. Fetch requests are constructed using the API key to make new requests and update the tree with live data. Data is formatted for use with react-tree-graph and passed into state. Exercise in state management and using state to present data fluidly.",
+          tags: ["React","react-tree-graph","JavaScript","HTML5","CSS3","API Data","Data Visualization", "Dynamic Queries", "Data Formatting", "State Manipulation"],
+          link: "https://github.com/Carl-J-M/TreeOfLife"
+        },
+              {
+          title: "CRYPTIC",
+          description: "An application designed to generate hype as an internet mystery. I designed and built a fake 'redacted document' using HTML, CSS & Vue which takes data from a custom API my teammates built, allowing for dynamic riddles to be dropped into our fake document.",
+          tags: ["Vue.js", "HTML5", "CSS3", "Leaflet.js", "MongoDB", "Custom Backend", "Login", "Express","Trello"],
+          link: "https://github.com/Carl-J-M/js_group_0"
+        },
+        {
+          title: "TRAVELBUCKET",
+          description: "Ruby/Sinatra travel bucket list application, using restful routes & a postgres database.",
+          tags: ["Ruby", "Sinatra", "HTML5", "CSS3", "SQL", "POSTGRES", "RDBMS", "Relationships", "OOP", "Restful Routes"],
+          link: "https://github.com/Carl-J-M/travel_bucket"
+        }
+      ]
+    }
+  },
+  methods: {
+    selectProject: function (event, id) {
+      console.log(id);
 
+      
+      this.selectedProjectTitle = this.projects[id].title;
+      this.selectedProjectDescription = this.projects[id].description;
+      this.selectedProjectTags = this.projects[id].tags;
+      this.selectedProjectLink = this.projects[id].link;
+      return;
 
+  }
+
+}
 }
 </script>
 
 <style lang="css" scoped>
+
 .pageContainer {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  font-family: "Josefin Sans", sans-serif;
+  position: relative;
   top: 0px;
   left: 0px;
-  width: 100vw;
-  min-height: 40vh;
-  height: auto;
-  margin-top: 1em;
-
-
-  background-color: rgba(15, 155, 255, 0.9);
-  font-family: "Josefin Sans", sans-serif;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: white;
+  z-index: 0;
 }
-
 .pageHeading {
-
-  color: white;
-  padding-left: 1.8em;
-  margin-top: 2em;
-  margin-bottom: 1em;
   text-align: center;
-  min-width: 100%;
-  letter-spacing: 0.5em;
-  font-weight: 600;
-  font-size: 2em;
-  min-height: 2em;
-
-
-}
-.projectContainer {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-
-  margin-bottom: 10em;
-  border-radius: 0.3em;
-}
-
-.splashText {
-  letter-spacing: 0.1em;
-  text-align: center;
-  font-size: 1em;
-  margin-bottom: 1em;
-  font-family: "Josefin Sans", sans-serif;
+  width: 100%;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  letter-spacing: .5em;
   color: white;
+  background-color: rgba(15, 155, 255, 0.9);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
 }
+.overlay {
 
-.project {
-  position: relative;
-  width: 38vw;
-  text-align: center;
-  align-self: center;
-  height: 38vh;
-  color: white;
-  line-height: 2em;
-  font-size: 1em;
-  padding: 2em 4em;
-  display: block;
-  overflow: hidden;
-  font-family: "Josefin Sans", sans-serif;
-
-}
-
-.overlayOne {
-  position: absolute;
   top: 0px;
   left: 0px;
   width: 100%;
   height: 100%;
-  background-image: url('../assets/lifetaxon.png');
-  background-size: 100% 100%;
-  z-index: 0;
-  opacity: 1;
-  transition-duration: 0.5s;
-  cursor: pointer;
-  margin: 0;
-}
-.overlayOne:hover {
-
-    opacity: 0;
-    background-size: 200% 200%;
-
+  background-color: black;
+  clip-path: rect(10px, 190px, 190px, 10px);
 
 }
-.overlayTwo {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  background-image: url('../assets/redditalien.png');
-  background-size: 20%;
-  z-index: 0;
-  opacity: 1;
-  transition-duration: 0.5s;
-}
-.overlayTwo:hover {
-  opacity: 0;
+.parent {
+display: grid;
+grid-template-columns: .1fr repeat(3, 1fr) .1fr;
+grid-template-rows: .5fr 4fr repeat(3, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+padding: 0.1em;
 
 }
-.overlayThree {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  background-image: url('../assets/travelbucket.png');
-  background-size: 105% 100%;
-  z-index: 0;
-  opacity: 1;
-  transition-duration: 0.5s;
-}
-.overlayThree:hover {
-  opacity: 0;
-  background-size: 150% 150%;
-}
-.overlayFour {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  background-image: url('../assets/cryptic.png');
-  background-size: 150% 150%;
-  z-index: 0;
-  opacity: 1;
-  transition-duration: 0.5s;
-}
-.overlayFour:hover {
-  opacity: 0;
-  background-size: 100% 100%;
-}
-.front {
-  z-index: 5;
-}
-.pulseElement {
-    animation: pulse 11s ease-in-out infinite;
-}
-.pulseElement2 {
-      animation: pulse2 10s ease-in-out forwards;
-}
-.center {
+
+.card {
   text-align: center;
+  height: auto;
+  min-height: 15em;
+  margin: 0em 1em;
+  transition: all ease-in-out 0.4s;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
-.contactButton {
-  color: white;
+.card:hover {
   cursor: pointer;
+  background-size: 250% 250%;
+}
+
+.cardtext {
+  text-align: center;
+  height: auto;
+  margin: 0em 1em;
   padding: 1em;
-  padding-left: 1.8em;
-  margin-top: 1em;
-  margin-bottom: 4em;
-  border: none;
-  background-color: transparent;
-  letter-spacing: 1em;
-  border: solid white 2px;
-  border-radius: 0.2em;
-  font-weight: 600;
-  font-size: 18px;
-  font-family: "Josefin Sans", sans-serif;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+    z-index: 0;
+  color: black;
 }
-.noStyle {
+
+.card1 { grid-area: 2 / 2 / 3 / 3; 
+background-size: 100% 100%;
+background-image: url('../assets/lifetaxon.png');
+background-repeat: no-repeat;
+
+}
+.card2 { grid-area: 2 / 3 / 3 / 4;
+background-size: 100% 100%;
+background-image: url('../assets/cryptic.png');
+background-repeat: no-repeat;
+
+}
+.card3 { grid-area: 2 / 4 / 3 / 5; 
+background-size: 100% 100%;
+background-image: url('../assets/travelbucket.png');
+background-repeat: no-repeat;
+
+}
+.card1text { grid-area: 3 / 2 / 4 / 3;
+
+}
+.card2text { grid-area: 3 / 3 / 4 / 4; 
+
+}
+.card3text { grid-area: 3 / 4 / 4 / 5;
+
+ }
+
+.displayContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 5em;
+  margin: 0 auto;
+  width: 80%;
+
+
+}
+
+.displayHeading {
+  text-align: center;
+  color: black;
+  width: 100vw;
+  font-size: 2em;
+
+}
+
+.displayText {
+  text-align: center;
+  padding: 1em 2em;
+  font-size: 1em;
+  line-height: 1.2em;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 1em;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  */
+}
+
+.tagContainer {
+  display: flex;
+  flex-flow: column wrap;
+  height: 100%;
+}
+.tag {
+  padding: 0.4em;
+  margin: 0em 0.5em;
+  margin-top: 2em;
+  /* border-radius: 0.5em; */
+  text-align: center;
+  color: dodgerblue;
+  font-size: 2em;
+  font-weight: 800;
+  width: auto;
+  height: 40%;
+
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.01); 
+  
+}
+.github {
+  height: 2em;
+  width: 2em;
+  padding: 1em;
+
+  margin: 0 auto;
+  margin-top: 1em;
+  background-image: url('../assets/github.svg');
+  background-size: 100% 100%;
+  
+}
+
+.lifetaxon {
+  color: dodgerblue;
+
+}
+.lifetaxon a {
   text-decoration: none;
 }
-@keyframes pulse {
-	0% {
-    background-color: rgba(255, 181, 33);
-
-
-	}
-	20% {
-    background-color: rgba(15, 155, 255);
-	}
-  100% {
-    background-color: rgba(255, 181, 33);
-  }
-}
-@keyframes pulse2 {
-	0% {
-    background-color: rgba(255, 181, 33,0.8);
-	}
-	25% {
-    background-color: rgba(255, 181, 33, 0.8);
-	}
-	100% {
-    background-color: rgba(15, 155, 255, 0.8);
-	}
-}
-@keyframes slide {
-  0%{
-      margin-right: 1em;
-      font-size: 0.5em;
-  }
-  20%{
-    margin-right: -0.1em;
-    font-size: 4em;
-  }
-  80%{
-    margin-right: -0.1em;
-    font-size: 4em;
-  }
-  100%{
-    margin-right: 1em;
-    font-size: 0.5em;
-  }
-}
-@keyframes slide2 {
-  0%{
-      margin-left: 0.1em;
-      font-size: 1em;
-  }
-
-  50%{
-    margin-left: 1em;
-    font-size: 4em;
-  }
-
-  100%{
-    margin-left: 0.1em;
-    font-size: 1em;
-  }
-}
-
-@media only screen and (max-width: 1200px) {
-  .pageHeading {
-    font-size: 1em;
-    padding-bottom: 0em;
-    margin-bottom: 0em;
-  }
-  .project {
-
-    margin: 0px;
-    padding: 1em;
-    font-size: 0.8em;
-  }
-  .projectContainer {
-   padding-top: 0px;
-  }
-
-  @keyframes slide {
-
-  }
-  @keyframes slide2 {
-
-  }
-
-  .splashText {
-    padding: 0em 2em;
-    color: white;
-  }
-}
-
 </style>

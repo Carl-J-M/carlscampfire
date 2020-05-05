@@ -19,7 +19,7 @@
         <h4 class="left subheading">Where?</h4>
         <p class="left subtext">
         I grew up near Stoke-On-Trent in the midlands.
-        My most recent role was working as a cocktail bartender at Dishoom in Edinburgh.</p>
+        I worked as a cocktail bartender at Dishoom in Edinburgh before I decided to join CodeClan.</p>
         <h4 class="left subheading">Why?</h4>
         <p class="left subtext">
           I decided to leave the hospitality industry after feeling as though my ability to learn new things began to stagnate. I didn't feel challenged or excited by my work and resolved to learn all I could about computer programming and software development.
@@ -179,7 +179,7 @@ export default {
  font-size: auto;
  text-align: center;
  border-radius: 0.2em;
- margin-bottom: 1em;
+ margin-bottom: 4em;
 
  margin-top: -1em;
 }
