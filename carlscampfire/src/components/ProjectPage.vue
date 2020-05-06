@@ -5,7 +5,7 @@
       PROJECTS
     </h1>
     <div class="parent">
-      <div class="card1 card" v-on:click="selectProject($event, 0)"></div>
+      <div class="card1 card" v-on:click="selectProject($event, 0)" href="#projectTitle"></div>
       <div class="card2 card" v-on:click="selectProject($event, 1)"></div>
       <div class="card3 card" v-on:click="selectProject($event, 2)"></div>
       <div class="card1text cardtext">{{ projects[0].title}}
@@ -14,12 +14,21 @@
       <div class="card2text cardtext">{{ projects[1].title}}</div>
       <div class="card3text cardtext">{{ projects[2].title}}</div>
     </div>
-            <h2 class="displayHeading">{{selectedProjectTitle}}<a :href="selectedProjectLink"><div class="icon github hidden"></div></a></h2>
+            <h2 class="displayHeading" id="projectTitle">
+              {{selectedProjectTitle}}
+              <a :href="selectedProjectLink">
+                <div class="icon github hidden pulseElement"></div>
+             </a>
+            </h2>
+          
         <p class="displayText">{{selectedProjectDescription}}</p>
     <div class="displayContainer">
         <div class="tag" v-for="tag in selectedProjectTags">
           <div>{{tag}}</div>
         </div>
+    </div>
+    <div class="footer">
+      <h4 class="copyright">Carl Mensah © 2020</h4>
     </div>
   </div>
 </template>
@@ -36,20 +45,20 @@ export default {
       [
         {
           title: "LIFETAXON",
-          description: "An interactive map of the taxonomy of life, using live data from gbif.com containing over 240,000 datapoints. Fetch requests are constructed using the API key to make new requests and update the tree with live data. Data is formatted for use with react-tree-graph and passed into state. Exercise in state management and using state to present data fluidly.",
+          description: "An interactive map of the taxonomy of life, using the gbif.com API containing over 240,000 datapoints. Fetch requests are constructed dynamically by using keys extracted from a given record. The data from these new requests updates the state. This state data is passed down as a prop to the tree graph itself. Exercise in state management and using state to present data fluidly.",
           tags: ["React","react-tree-graph","JavaScript","HTML5","CSS3","API Data","Data Visualization", "Dynamic Queries", "Data Formatting", "State Manipulation"],
           link: "https://github.com/Carl-J-M/TreeOfLife"
         },
               {
           title: "CRYPTIC",
-          description: "An application designed to generate hype as an internet mystery. I designed and built a fake 'redacted document' using HTML, CSS & Vue which takes data from a custom API my teammates built, allowing for dynamic riddles to be dropped into our fake document.",
-          tags: ["Vue.js", "HTML5", "CSS3", "Leaflet.js", "MongoDB", "Custom Backend", "Login", "Express","Trello"],
+          description: "An application designed to generate hype as an internet mystery. I designed and built a fake 'redacted document' using HTML, CSS & Vue.js data properties. The application takes data from a custom API we built as a team, this data populates the document and provides the information to decode the password. A successful password attempt routes the user to a page with a Leaflet.js map and instructions. Admin login allows for creating new events.",
+          tags: ["Vue.js", "HTML5", "CSS3", "Leaflet.js", "MongoDB", "Custom Backend", "Login", "Express","Trello","Wireframing"],
           link: "https://github.com/Carl-J-M/js_group_0"
         },
         {
           title: "TRAVELBUCKET",
-          description: "Ruby/Sinatra travel bucket list application, using restful routes & a postgres database.",
-          tags: ["Ruby", "Sinatra", "HTML5", "CSS3", "SQL", "POSTGRES", "RDBMS", "Relationships", "OOP", "Restful Routes"],
+          description: "A personal travel bucket list application designed for a single user as a place to tick off destinations and write notes about their travels. Full CRUD functionality for Continents, Countries & Cities.",
+          tags: ["Ruby", "Sinatra", "HTML5", "CSS3", "SQL", "POSTGRES", "RDBMS", "Relationships", "OOP", "Restful Routes", "CRUD"],
           link: "https://github.com/Carl-J-M/travel_bucket"
         }
       ]
@@ -92,7 +101,9 @@ export default {
   letter-spacing: .5em;
   color: white;
   background-color: rgba(15, 155, 255, 0.9);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+    -webkit-box-shadow: 0px 0px 28px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 28px -1px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 28px -1px rgba(0,0,0,0.75);
 }
 .overlay {
 
@@ -120,11 +131,12 @@ padding: 0.1em;
   min-height: 15em;
   margin: 0em 1em;
   transition: all ease-in-out 0.4s;
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .card:hover {
   cursor: pointer;
-  background-size: 250% 250%;
+  background-size: 120% 120%;
+  
 }
 
 .cardtext {
@@ -181,6 +193,8 @@ background-repeat: no-repeat;
   color: black;
   width: 100vw;
   font-size: 2em;
+  padding: 1em;
+  margin-top: 0px;
 
 }
 
@@ -188,7 +202,7 @@ background-repeat: no-repeat;
   text-align: center;
   padding: 1em 2em;
   font-size: 1em;
-  line-height: 1.2em;
+  line-height: 1.5em;
   width: 80%;
   margin: 0 auto;
   margin-top: 1em;
@@ -206,7 +220,7 @@ background-repeat: no-repeat;
   margin-top: 2em;
   /* border-radius: 0.5em; */
   text-align: center;
-  color: dodgerblue;
+
   font-size: 2em;
   font-weight: 800;
   width: auto;
@@ -218,13 +232,14 @@ background-repeat: no-repeat;
 .github {
   height: 2em;
   width: 2em;
-  padding: 1em;
+  padding: 1.5em;
 
   margin: 0 auto;
   margin-top: 1em;
   background-image: url('../assets/github.svg');
   background-size: 100% 100%;
-  
+  border-radius: 50%;
+  transition: all ease-in-out 1s;
 }
 
 .lifetaxon {
@@ -233,5 +248,43 @@ background-repeat: no-repeat;
 }
 .lifetaxon a {
   text-decoration: none;
+}
+.footer {
+  height: auto;
+  width: 100%;
+  background: #000000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background-size: 100% 150%;
+
+}
+.copyright {
+  font-size: 0.7em;
+  color: white;
+  text-align: center;
+  bottom: 1em;
+  padding: 2em;
+}
+.pulseElement {
+    animation: pulse 10s ease-in-out infinite;
+}
+@keyframes pulse {
+  0% {
+  background-color: rgba(255, 151, 33, 0.5);
+
+	}
+	33% {
+    background-color: rgb(33, 196, 255);
+
+	}
+
+	66% {
+    background-color: rgb(44, 165, 78);
+
+	}
+
+  100% {
+  background-color: rgb(255, 151, 33, 0.5);
+  }
 }
 </style>
