@@ -8,11 +8,11 @@
       <div class="card1 card" v-on:click="selectProject($event, 0)" href="#projectTitle"></div>
       <div class="card2 card" v-on:click="selectProject($event, 1)"></div>
       <div class="card3 card" v-on:click="selectProject($event, 2)"></div>
-      <div class="card1text cardtext">{{ projects[0].title}}
+      <div class="card1text cardtext" v-on:click="selectProject($event, 0)">{{ projects[0].title}}
         <p  class="lifetaxon"><a href="https://lifetaxon.herokuapp.com/">View On Heroku</a></p>
         </div>
-      <div class="card2text cardtext">{{ projects[1].title}}</div>
-      <div class="card3text cardtext">{{ projects[2].title}}</div>
+      <div class="card2text cardtext" v-on:click="selectProject($event, 1)">{{ projects[1].title}}</div>
+      <div class="card3text cardtext" v-on:click="selectProject($event, 2)">{{ projects[2].title}}</div>
     </div>
             <h2 class="displayHeading" id="projectTitle">
               {{selectedProjectTitle}}
@@ -132,6 +132,7 @@ padding: 0.1em;
   margin: 0em 1em;
   transition: all ease-in-out 0.4s;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  opacity: 0.4;
 }
 .card:hover {
   cursor: pointer;
@@ -286,5 +287,19 @@ background-size: 100% 150%;
   100% {
   background-color: rgb(255, 151, 33, 0.5);
   }
+}
+
+@media only screen and (max-width: 1200px) {
+  .card {
+    display: none;
+    margin: 3em;
+    
+    height: 0px;
+  }
+  .cardtext {}
+.parent {
+display: flex;
+justify-content: center;
+}
 }
 </style>

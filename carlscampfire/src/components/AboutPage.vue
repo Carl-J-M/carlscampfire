@@ -274,8 +274,9 @@ export default {
   .subContainer {
     width: 100%;
     margin: 0.2em;
-    margin-top: 1em;
+    margin-top: 1.5em;
     padding: 1em;
+    margin-bottom: 2.5em;
   }
   .avatar {
     right: 20px;
