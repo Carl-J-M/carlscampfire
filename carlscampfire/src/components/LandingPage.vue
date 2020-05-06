@@ -88,7 +88,7 @@ export default {
    position: fixed;
    top: 0;
    left: 0;
-   width: 100%;
+   width: 100vw;
    height: 100%;
    z-index: -1;
    pointer-events: none;
@@ -125,6 +125,9 @@ export default {
 @media only screen and (max-width: 1200px) {
    .pageContainer {
      background-size: 120% 100%;
+   }
+   .vimeo-wrapper {
+     position: absolute;
    }
 }
 @media only screen and (max-width: 400px) {
