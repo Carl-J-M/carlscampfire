@@ -229,6 +229,9 @@ background-repeat: no-repeat;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.01); 
   
 }
+.tag:hover {
+   box-shadow: none;
+}
 .github {
   height: 2em;
   width: 2em;
